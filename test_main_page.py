@@ -1,4 +1,3 @@
-from time import sleep
 import pytest
 from pages.basket_page import BasketPage
 from pages.login_page import LoginPage
@@ -28,10 +27,7 @@ def test_guest_cant_see_product_in_basket_opened_from_main_page(browser):
     link = "http://selenium1py.pythonanywhere.com/"
     page = MainPage(browser, link)
     page.open()
-    # go to basket page
     page.go_to_basket_page()
     basket_page = BasketPage(browser, browser.current_url)
-    # in basket should be no products
     basket_page.should_not_be_products_in_basket()
-    # should be message that basket is empty
     basket_page.should_be_empty_basket_message()
