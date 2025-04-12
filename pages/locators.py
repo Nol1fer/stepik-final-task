@@ -18,7 +18,13 @@ class ProductPageLocators:
     BASKET_TOTAL = (By.CSS_SELECTOR, ".basket-mini")
     SUCCESS_MESSAGE = (By.CSS_SELECTOR, ".alert-success")
 
+
 class BasePageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    BASKET_LINK = (By.CSS_SELECTOR, ".basket-mini > .btn-group > a.btn")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
-    
+
+
+class BasketPageLocators:
+    BASKET_ITEMS = (By.CSS_SELECTOR, ".basket-items")
+    EMPTY_BAKSET_MESSAGE = (By.CSS_SELECTOR, "#content_inner > p")
